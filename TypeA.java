@@ -2,6 +2,7 @@ import java.util.Random;
 
 public class TypeA extends Thing
 {
+    // Override
     public void move()
     {
         Random rand = new Random(System.currentTimeMillis());
@@ -17,5 +18,7 @@ public class TypeA extends Thing
         {
             dir = (dir + 3) % 4;
         }
+
+        step();
     }
 }
