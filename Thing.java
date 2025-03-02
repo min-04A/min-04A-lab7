@@ -5,7 +5,9 @@ public class Thing
     public int  row, col, dir, timeSinceLast;
     public char lab = 'r';
 
-    public static void step(Thing t) 
+    public void move();
+
+    public void step() 
     {
         // change of direction of column
         final int[] dc = {0, 1, 0, -1};
@@ -13,7 +15,7 @@ public class Thing
         final int[] dr = {1, 0, -1, 0};
 
         // update position
-        t.row += dr[t.dir];
-        t.col += dc[t.dir];
+        row += dr[dir];
+        col += dc[dir];
     }
 }
