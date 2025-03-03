@@ -3,31 +3,37 @@ import java.util.List;
 
 public class ThingList
 {
-    private List<Thing> things;
+    private Node head;
 
     public ThingList()
     {
-        things = new LinkedList<>();
+        this.head = null;
     }
 
     public void add(Thing t)
     {
-        things.add(t);
+        Node newNode = new Node(t);
+        newNode.next = head;
+        head = newNode;
     }
 
     public void moveAll()
     {
-        for(Thing t : things)
+        Node present = head;
+        while(present != null)
         {
-            t.move();
+            present.data.move();
+            present = present.next;
         }
     }
 
     public void printAll()
     {
-        for(Thing t : things)
+        Node present = head;
+        while(present != null)
         {
-            System.out.println(t.row + " " + t.col + " " + t.lab);
+            System.out.println(present.data.row + " " + present.data.col + " " + present.data.lab);
+            present = present.next;
         }
         System.out.println("done");
         System.out.flush();
