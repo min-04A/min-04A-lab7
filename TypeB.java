@@ -2,7 +2,7 @@ import java.util.Random;
 
 public class TypeB extends Thing
 {
-    public int timeSinceLast;
+    protected int timeSinceLast;
     public TypeB()
     {
         this.isTypeB = true;

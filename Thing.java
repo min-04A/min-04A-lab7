@@ -4,10 +4,10 @@ public abstract class Thing
 {
     // dir: 0=North, 1=East, 2=South, 3=West.
     // timeSinceLast: this is only important for "TypeB" Things.
-    Random rand = new Random(System.currentTimeMillis());
-    public int  row, col, dir, timeSinceLast;
-    public char lab = 'r';
-    public boolean isTypeB = false;
+    private Random rand = new Random(System.currentTimeMillis());
+    protected int  row, col, dir, timeSinceLast;
+    protected char lab = 'r';
+    protected boolean isTypeB = false;
 
     public void move()
     {
