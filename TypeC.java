@@ -2,6 +2,7 @@ import java.util.Random;
 
 public class TypeC extends Thing
 {
+    // make spiral
     Random rand = new Random(System.currentTimeMillis());
     // 0:right, 1:left
     int chosenDirection = rand.nextInt(2);

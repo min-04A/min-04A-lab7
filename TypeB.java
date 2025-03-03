@@ -3,6 +3,10 @@ import java.util.Random;
 public class TypeB extends Thing
 {
     public int timeSinceLast;
+    public TypeB()
+    {
+        this.isTypeB = true;
+    }
 
     // Override
     public void move()
